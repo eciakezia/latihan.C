@@ -1,6 +1,6 @@
 #include<stdio.h>
-void bahanMakanan(){
-    int bahan;
+void bahanMakanan(int *totalHarga, int *totalBarang){
+    int bahan, jumlah, harga = 0;
     char lanjut;
 
     do {
@@ -22,32 +22,24 @@ void bahanMakanan(){
     scanf("%d", &bahan);
         
         switch(bahan){
-            case 1:
-                printf("Anda memilih Garam.\n");
-                break;
-            case 2:
-                printf("Anda memilih Gula.\n");
-                break;
-            case 3:
-                printf("Anda memilih Telur.\n");
-                break;
-            case 4:
-                printf("Anda memilih Sosis.\n");
-                break;
-            case 5:
-                printf("Anda memilih Tepung.\n");
-                break;
-            case 6:
-                printf("Anda memilih Lada.\n");
-                break;
-            case 7:
-                printf("Anda memilih Indomie.\n");
-                break;
-            case 8:
-                printf("Anda memilih Susu.\n");
-                break;
+            case 1: harga = 3000; break;
+            case 2: harga = 11000; break;
+            case 3: harga = 3000; break;
+            case 4: harga = 2000; break;
+            case 5: harga = 8000; break;
+            case 6: harga = 1000; break;
+            case 7: harga = 3000; break;
+            case 8: harga = 15000; break;
             default: printf("Pilihan tidak valid.\n");
         }
+
+        printf("Masukkan jumlah barang : ");
+        scanf("%d", &jumlah);
+
+        *totalHarga += harga * jumlah;
+        *totalBarang += jumlah;
+
+        printf("Anda membeli %d barang dengan total %d\n\n", jumlah, harga * jumlah);
 
     printf("Apakah anda ingin memilih lagi bahan lagi? (y/t): ");
     scanf(" %c", &lanjut);
@@ -60,6 +52,8 @@ void bahanMakanan(){
 int main(){
     
     int pilihan;
+    int totalHarga = 0;
+    int totalBarang = 0;
     char lanjutMenu;
 
     do{
@@ -73,29 +67,38 @@ int main(){
     printf("============================\n\n");
 
         
-            printf("Masukkan pilihan (1-4): ");
+            printf("Masukkan pilihan (1-5): ");
             scanf("%d", &pilihan);
 
-        if(pilihan == 1){
-            bahanMakanan();
-        }
-        else if(pilihan == 2){
-            // Peralatan Elektronik
-        }
-        else if(pilihan == 3){
-            // Peralatan rumah tangga
-        }
-        else if(pilihan == 4){
-            // Stationary
-        }
-        else if(pilihan == 5){
-            printf("Terima kasih telah berbelanja di toko kami.\n");
+        switch(pilihan){
+            case 1: bahanMakanan(&totalHarga, &totalBarang);
+            break;
+            case 2:
+            break;
+            case 3:
+            break;
+            case 4:
+            break;
+            case 5:
+                printf("\n========== STRUK BELANJA ==========\n");
+                printf("Total jumlah barang: %d\n", totalBarang);
+                printf("Total harga belanja: Rp.%d\n", totalHarga);
+                printf("===================================\n\n");
+                printf("Terima kasih telah berbelanja di toko kami.\n\n");
+                return 0; 
+            default:
+                printf("Pilihan tidak valid. Silakan coba lagi.\n");
         }
 
             printf("\nKembali ke menu utama? (y/t) ");
             scanf(" %c", &lanjutMenu);
 
     }while(lanjutMenu == 'y' || lanjutMenu == 'Y');
+
+    printf("\n========== STRUK BELANJA ==========\n");
+    printf("Total jumlah barang: %d\n", totalBarang);
+    printf("Total harga belanja: Rp.%d\n", totalHarga);
+    printf("===================================\n");
 
 
     return 0;
