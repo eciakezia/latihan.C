@@ -3,17 +3,18 @@ void bahanMakanan(){
     int bahan;
     char lanjut;
 
-    do{
-    printf("=====================\n");
-    printf("1. Garam    Rp.3000\n");
-    printf("2. Gula     Rp.11000\n");
-    printf("3. Telur    Rp.3000\n");
-    printf("4. Sosis    Rp.2000\n");
-    printf("5. Tepung   Rp.8000\n");
-    printf("6. Lada     Rp.1000\n");
-    printf("7. Indomie  Rp.3000\n");
-    printf("8. Susu     Rp.15000\n");
-    printf("=====================\n\n");
+    do {
+
+        printf("=====================\n");
+        printf("1. Garam    Rp.3000\n");
+        printf("2. Gula     Rp.11000\n");
+        printf("3. Telur    Rp.3000\n");
+        printf("4. Sosis    Rp.2000\n");
+        printf("5. Tepung   Rp.8000\n");
+        printf("6. Lada     Rp.1000\n");
+        printf("7. Indomie  Rp.3000\n");
+        printf("8. Susu     Rp.15000\n");
+        printf("=====================\n\n");
 
     
     
@@ -57,6 +58,11 @@ void bahanMakanan(){
 }
 
 int main(){
+    
+    int pilihan;
+    char lanjutMenu;
+
+    do{
 
     printf("======= Menu Belanja =======\n");
     printf("1. Bahan Makanan\n");
@@ -66,7 +72,7 @@ int main(){
     printf("5. Exit\n");
     printf("============================\n\n");
 
-        int pilihan;
+        
             printf("Masukkan pilihan (1-4): ");
             scanf("%d", &pilihan);
 
@@ -85,6 +91,11 @@ int main(){
         else if(pilihan == 5){
             printf("Terima kasih telah berbelanja di toko kami.\n");
         }
+
+            printf("\nKembali ke menu utama? (y/t) ");
+            scanf(" %c", &lanjutMenu);
+
+    }while(lanjutMenu == 'y' || lanjutMenu == 'Y');
 
 
     return 0;
