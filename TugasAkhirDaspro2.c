@@ -45,10 +45,10 @@ void bahanMakanan(int *totalHarga, int *totalBarang){
     printf("Apakah anda ingin memilih lagi bahan lagi? (y/t): ");
     scanf(" %c", &lanjut);
 
-    } while (lanjut == 'y' || lanjut == 'Y');
+    }       while (lanjut == 'y' || lanjut == 'Y');
 
-    
 }
+
 
 //menu 2
 void peralatanElektronik(int *totalHarga, int *totalBarang) {
@@ -139,7 +139,7 @@ void peralatanRumahTangga(int *totalHarga, int *totalBarang) {
     printf("Apakah anda ingin memilih lagi peralatan rumah tangga? (y/t): ");
         scanf(" %c", &lanjut);
 
-    }   while (lanjut == 'y' || lanjut == 'Y');
+     }      while (lanjut == 'y' || lanjut == 'Y');
 
 }
 
@@ -185,7 +185,7 @@ do {
         printf("Apakah anda ingin memilih lagi peralatan stationary? (y/t): ");
         scanf(" %c", &lanjut);
 
-    } while (lanjut == 'y' || lanjut == 'Y');
+    }       while (lanjut == 'y' || lanjut == 'Y');
 
 }
 
@@ -195,6 +195,7 @@ int main(){
     int pilihan;
     int totalHarga = 0;
     int totalBarang = 0;
+    int nominal, kembalian;
     char lanjutMenu;
 
     do{
@@ -232,10 +233,20 @@ int main(){
 
     }while(lanjutMenu == 'y' || lanjutMenu == 'Y');
 
-    printf("\n========== STRUK BELANJA ==========\n");
+    printf("\n============================== STRUK BELANJA ===============================\n");
     printf("Total jumlah barang: %d\n", totalBarang);
     printf("Total harga belanja: Rp.%d\n", totalHarga);
-    printf("===================================\n");
+    printf("Masukkan jumlah uang untuk pembayaran: ");
+        scanf("%d", &nominal);
+
+        if(nominal >= totalHarga){
+            kembalian = nominal - totalHarga;
+            printf("Kembalian: Rp.%d\n", kembalian);
+        } else{
+            printf("Uang anda tidak cukup, perlu menambah sebanyak = Rp.%d\n", totalHarga - nominal);
+        }
+
+    printf("=============================================================================\n");
 
 
     return 0;
