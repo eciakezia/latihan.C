@@ -198,6 +198,10 @@ int main(){
     int nominal, kembalian;
     char lanjutMenu;
 
+     printf("\t\t\t\t===================================================================\n");
+    printf("\t\t\t\t||            SELAMAT DATANG DI TOKO KANG DANIEL                 ||\n");
+    printf("\t\t\t\t===================================================================\n");
+
     do{
 
     printf("\n\n======= Menu Belanja =======\n");
@@ -234,6 +238,9 @@ int main(){
     }while(lanjutMenu == 'y' || lanjutMenu == 'Y');
 
     printf("\n============================== STRUK BELANJA ===============================\n");
+
+    do{
+
     printf("Total jumlah barang: %d\n", totalBarang);
     printf("Total harga belanja: Rp.%d\n", totalHarga);
     printf("Masukkan jumlah uang untuk pembayaran: ");
@@ -242,11 +249,20 @@ int main(){
         if(nominal >= totalHarga){
             kembalian = nominal - totalHarga;
             printf("Kembalian: Rp.%d\n", kembalian);
+            break;
         } else{
-            printf("Uang anda tidak cukup, perlu menambah sebanyak = Rp.%d\n", totalHarga - nominal);
+            printf("\nUang anda tidak cukup, perlu menambah sebanyak = Rp.%d\n\n", totalHarga - nominal); 
         }
 
-    printf("=============================================================================\n");
+       
+    }       while (1);
+
+
+      printf("\t\t\t\t===================================================================\n");
+    printf("\t\t\t\t||               TERIMA KASIH TELAH BERBELANJA                   ||\n");
+    printf("\t\t\t\t||                    DI TOKO KANG DANIEL                        ||\n");
+    printf("\t\t\t\t||                      SEE YOU AGAIN!!                          ||\n");
+    printf("\t\t\t\t===================================================================\n");
 
 
     return 0;
