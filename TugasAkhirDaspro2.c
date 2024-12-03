@@ -198,7 +198,7 @@ int main(){
     int nominal, kembalian;
     char lanjutMenu;
 
-     printf("\t\t\t\t===================================================================\n");
+    printf("\t\t\t\t===================================================================\n");
     printf("\t\t\t\t||            SELAMAT DATANG DI TOKO KANG DANIEL                 ||\n");
     printf("\t\t\t\t===================================================================\n");
 
@@ -258,7 +258,7 @@ int main(){
     }       while (1);
 
 
-      printf("\t\t\t\t===================================================================\n");
+    printf("\t\t\t\t===================================================================\n");
     printf("\t\t\t\t||               TERIMA KASIH TELAH BERBELANJA                   ||\n");
     printf("\t\t\t\t||                    DI TOKO KANG DANIEL                        ||\n");
     printf("\t\t\t\t||                      SEE YOU AGAIN!!                          ||\n");
