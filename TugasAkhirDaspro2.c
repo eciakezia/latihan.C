@@ -5,6 +5,8 @@ void bahanMakanan(int *totalHarga, int *totalBarang){
     char lanjut;
 
     do {
+        
+        do{
 
         printf("======================\n");
         printf("1. Garam    Rp.3.000\n");
@@ -32,7 +34,10 @@ void bahanMakanan(int *totalHarga, int *totalBarang){
             case 7: harga = 3000; break;
             case 8: harga = 15000; break;
             default: printf("Pilihan tidak valid.\n");
+                    printf("Mau pilih kembali? (y/t): ");
+                    scanf(" %c", &lanjut);
         }
+}       while (lanjut == 'y' || lanjut == 'Y');
 
         printf("Masukkan jumlah barang : ");
         scanf("%d", &jumlah);
@@ -56,6 +61,9 @@ void peralatanElektronik(int *totalHarga, int *totalBarang) {
     char lanjut;
 
     do {
+
+        do{
+
         printf("===============================\n");
         printf("1. Kipas Angin   Rp.150.000\n");
         printf("2. Rice Cooker   Rp.250.000\n");
@@ -80,7 +88,11 @@ void peralatanElektronik(int *totalHarga, int *totalBarang) {
             case 7: harga = 800000; break;
             case 8: harga = 3000000; break;
             default: printf("Pilihan tidak valid.\n");
+                    printf("Mau pilih kembali? (y/t): ");
+                    scanf(" %c", &lanjut);
         }
+}       while (lanjut == 'y' || lanjut == 'Y');
+
         printf("Masukkan jumlah barang : ");
         scanf("%d", &jumlah);
 
@@ -103,6 +115,9 @@ void peralatanRumahTangga(int *totalHarga, int *totalBarang) {
     char lanjut;
 
     do {
+
+        do{
+
         printf("==============================\n");
         printf("1. Sapu ijuk.      Rp.25.000\n");
         printf("2. Obat nyamuk.    Rp.10.000\n");
@@ -127,7 +142,11 @@ void peralatanRumahTangga(int *totalHarga, int *totalBarang) {
             case 7: harga = 6000; break;
             case 8: harga = 5000; break;
             default: printf("Pilihan tidak valid.\n");        
+                    printf("Mau pilih kembali? (y/t): ");
+                    scanf(" %c", &lanjut);
         }
+}       while (lanjut == 'y' || lanjut == 'Y');
+
     printf("Masukkan jumlah barang : ");
         scanf("%d", &jumlah);
 
@@ -148,7 +167,10 @@ void peralatanRumahTangga(int *totalHarga, int *totalBarang) {
  void stationary(int *totalHarga, int *totalBarang) {
       int bahan, jumlah, harga = 0;
       char lanjut;
-do {
+    do {
+
+        do{
+
         printf("==============================\n");
         printf("1. Buku 1 lusin    Rp.30.000\n");
         printf("2. Pulpen 1 pack   Rp.21.000\n");
@@ -172,8 +194,12 @@ do {
             case 6: harga = 10000; break;
             case 7: harga = 38000; break;
             case 8: harga = 9000 ; break;
-            default: printf("Pilihan tidak valid.\n");        
+            default: printf("Pilihan tidak valid.\n");       
+                    printf("Mau pilih kembali? (y/t): ");
+                    scanf(" %c", &lanjut); 
         }
+}       while (lanjut == 'y' || lanjut == 'Y');
+
         printf("Masukkan jumlah barang : ");
         scanf("%d", &jumlah);
 

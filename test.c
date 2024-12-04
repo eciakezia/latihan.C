@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+//menu 1
 float milimeterKesatuanLain(float milimeter){
 
     printf("masukkan nilai milimeter: ");
@@ -19,7 +19,7 @@ float milimeterKesatuanLain(float milimeter){
 int main(){
 int pilihan;
 float  milimeter;
-
+    printf("Menu:");
     printf("1. milimeter ke satuan lain\n");
     printf("2. milimeter ke satuan lain\n");
     printf("3. milimeter ke satuan lain\n");
