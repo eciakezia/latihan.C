@@ -5,7 +5,7 @@ void bahanMakanan(int *totalHarga, int *totalBarang){
     char lanjut;
 
     do {
-        
+        int pilihanValid = 0;
         do{
 
         printf("======================\n");
@@ -25,19 +25,25 @@ void bahanMakanan(int *totalHarga, int *totalBarang){
     scanf("%d", &bahan);
         
         switch(bahan){
-            case 1: harga = 3000; break;
-            case 2: harga = 11000; break;
-            case 3: harga = 3000; break;
-            case 4: harga = 2000; break;
-            case 5: harga = 8000; break;
-            case 6: harga = 1000; break;
-            case 7: harga = 3000; break;
-            case 8: harga = 15000; break;
+            case 1: harga = 3000; pilihanValid = 1; break;
+            case 2: harga = 11000; pilihanValid = 1; break;
+            case 3: harga = 3000; pilihanValid = 1; break;
+            case 4: harga = 2000; pilihanValid = 1; break;
+            case 5: harga = 8000; pilihanValid = 1; break;
+            case 6: harga = 1000; pilihanValid = 1; break;
+            case 7: harga = 3000; pilihanValid = 1; break;
+            case 8: harga = 15000; pilihanValid = 1; break;
             default: printf("Pilihan tidak valid.\n");
-                    printf("Mau pilih kembali? (y/t): ");
-                    scanf(" %c", &lanjut);
+                     break;
         }
-}       while (lanjut == 'y' || lanjut == 'Y');
+        if(!pilihanValid){
+            printf("Apakah ingin memilih kembali? (y/t): ");
+            scanf(" %c", &lanjut);
+            if(lanjut == 't' || lanjut == 'T'){
+                return;
+            }
+        }
+}       while (!pilihanValid);
 
         printf("Masukkan jumlah barang : ");
         scanf("%d", &jumlah);
@@ -61,7 +67,7 @@ void peralatanElektronik(int *totalHarga, int *totalBarang) {
     char lanjut;
 
     do {
-
+        int pilihanValid = 0;
         do{
 
         printf("===============================\n");
@@ -79,19 +85,25 @@ void peralatanElektronik(int *totalHarga, int *totalBarang) {
         scanf("%d", &bahan);
 
         switch (bahan) {
-            case 1: harga = 150000; break;
-            case 2: harga = 250000; break;
-            case 3: harga = 300000; break;
-            case 4: harga = 200000; break;
-            case 5: harga = 50000; break;
-            case 6: harga = 3000000; break;
-            case 7: harga = 800000; break;
-            case 8: harga = 3000000; break;
+            case 1: harga = 150000; pilihanValid = 1; break;
+            case 2: harga = 250000; pilihanValid = 1; break;
+            case 3: harga = 300000; pilihanValid = 1; break;
+            case 4: harga = 200000; pilihanValid = 1; break;
+            case 5: harga = 50000; pilihanValid = 1; break;
+            case 6: harga = 3000000; pilihanValid = 1; break;
+            case 7: harga = 800000; pilihanValid = 1; break;
+            case 8: harga = 3000000; pilihanValid = 1; break;
             default: printf("Pilihan tidak valid.\n");
-                    printf("Mau pilih kembali? (y/t): ");
-                    scanf(" %c", &lanjut);
+                     break;
         }
-}       while (lanjut == 'y' || lanjut == 'Y');
+        if(!pilihanValid){
+            printf("Apakah ingin memilih kembali? (y/t): ");
+            scanf(" %c", &lanjut);
+            if(lanjut == 't' || lanjut == 'T'){
+                return;
+            }
+        }
+}       while (!pilihanValid);
 
         printf("Masukkan jumlah barang : ");
         scanf("%d", &jumlah);
@@ -115,7 +127,7 @@ void peralatanRumahTangga(int *totalHarga, int *totalBarang) {
     char lanjut;
 
     do {
-
+        int pilihanValid = 0;
         do{
 
         printf("==============================\n");
@@ -133,19 +145,25 @@ void peralatanRumahTangga(int *totalHarga, int *totalBarang) {
         scanf("%d", &bahan);
 
         switch (bahan) {
-            case 1: harga = 25000; break;
-            case 2: harga = 10000; break;
-            case 3: harga = 32000; break;
-            case 4: harga = 24000; break;
-            case 5: harga = 20000; break;
-            case 6: harga = 28000; break;
-            case 7: harga = 6000; break;
-            case 8: harga = 5000; break;
+            case 1: harga = 25000; pilihanValid = 1; break;
+            case 2: harga = 10000; pilihanValid = 1; break;
+            case 3: harga = 32000; pilihanValid = 1; break;
+            case 4: harga = 24000; pilihanValid = 1; break;
+            case 5: harga = 20000; pilihanValid = 1; break;
+            case 6: harga = 28000; pilihanValid = 1; break;
+            case 7: harga = 6000; pilihanValid = 1; break;
+            case 8: harga = 5000; pilihanValid = 1; break;
             default: printf("Pilihan tidak valid.\n");        
-                    printf("Mau pilih kembali? (y/t): ");
-                    scanf(" %c", &lanjut);
+                     break;
         }
-}       while (lanjut == 'y' || lanjut == 'Y');
+        if(!pilihanValid){
+            printf("Apakah ingin memilih kembali? (y/t): ");
+            scanf(" %c", &lanjut);
+            if(lanjut == 't' || lanjut == 'T'){
+                return;
+            }
+        }
+}       while (!pilihanValid);
 
     printf("Masukkan jumlah barang : ");
         scanf("%d", &jumlah);
@@ -168,7 +186,7 @@ void peralatanRumahTangga(int *totalHarga, int *totalBarang) {
       int bahan, jumlah, harga = 0;
       char lanjut;
     do {
-
+        int pilihanValid = 0;
         do{
 
         printf("==============================\n");
@@ -186,19 +204,25 @@ void peralatanRumahTangga(int *totalHarga, int *totalBarang) {
         scanf("%d", &bahan);
 
     switch (bahan) {
-            case 1: harga = 30000; break;
-            case 2: harga = 21000; break;
-            case 3: harga = 17000; break;
-            case 4: harga = 55000; break;
-            case 5: harga = 14000; break;
-            case 6: harga = 10000; break;
-            case 7: harga = 38000; break;
-            case 8: harga = 9000 ; break;
+            case 1: harga = 30000; pilihanValid = 1; break;
+            case 2: harga = 21000; pilihanValid = 1; break;
+            case 3: harga = 17000; pilihanValid = 1; break;
+            case 4: harga = 55000; pilihanValid = 1; break;
+            case 5: harga = 14000; pilihanValid = 1; break;
+            case 6: harga = 10000; pilihanValid = 1; break;
+            case 7: harga = 38000; pilihanValid = 1; break;
+            case 8: harga = 9000 ; pilihanValid = 1; break;
             default: printf("Pilihan tidak valid.\n");       
-                    printf("Mau pilih kembali? (y/t): ");
-                    scanf(" %c", &lanjut); 
+                     break;
         }
-}       while (lanjut == 'y' || lanjut == 'Y');
+        if(!pilihanValid){
+            printf("Apakah ingin memilih kembali? (y/t): ");
+            scanf(" %c", &lanjut);
+            if(lanjut == 't' || lanjut == 'T'){
+                return;
+            }
+        }
+}       while (!pilihanValid);
 
         printf("Masukkan jumlah barang : ");
         scanf("%d", &jumlah);
